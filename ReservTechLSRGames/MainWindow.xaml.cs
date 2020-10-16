@@ -24,6 +24,27 @@ namespace ReservTechLSRGames
         {
             InitializeComponent();
             lbl_erreur.Foreground = Brushes.Red;
+            lbl_erreur.Visibility = Visibility.Hidden;
+        }
+
+        private void btn_connexion_Click(object sender, RoutedEventArgs e)
+        {
+            if (txt_identifiant.Text=="")
+            {
+                lbl_erreur.Visibility = Visibility.Visible;
+                lbl_erreur.Content = "Vous n'avez pas saisie un identifiant.";
+            }
+            if (pswbx_mot_de_passe.Password == "")
+            {
+                lbl_erreur.Visibility = Visibility.Visible;
+                lbl_erreur.Content = "Vous n'avez pas saisie de mot de passe.";
+            }
+            if(txt_identifiant.Text == "" & pswbx_mot_de_passe.Password == "")
+            {
+                lbl_erreur.Visibility = Visibility.Visible;
+                lbl_erreur.Content = "Vous avez saisie ni identifiant ni mot de passe.";
+            }
+            
         }
     }
 }

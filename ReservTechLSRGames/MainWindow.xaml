@@ -12,7 +12,7 @@
         <Label x:Name="lbl_mot_de_passe" Content="Mot de passe :" HorizontalAlignment="Right" Margin="0,154,208,0" VerticalAlignment="Top" Width="88"/>
         <TextBox x:Name="txt_identifiant" HorizontalAlignment="Left" Height="24" Margin="204,124,0,0" VerticalAlignment="Top" Width="120" FontSize="16"/>
         <PasswordBox x:Name="pswbx_mot_de_passe" HorizontalAlignment="Left" Margin="204,155,0,0" VerticalAlignment="Top" Width="120" Height="24" FontSize="16"/>
-        <Button x:Name="btn_connexion" Content="Se Connecter" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Width="90"/>
+        <Button x:Name="btn_connexion" Content="Se Connecter" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Width="90" Click="btn_connexion_Click"/>
         <Label x:Name="lbl_erreur" Content="" HorizontalAlignment="Center" Margin="0,92,0,0" VerticalAlignment="Top"/>
 
     </Grid>
