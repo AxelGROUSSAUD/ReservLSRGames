@@ -20,7 +20,7 @@ namespace ReservTechLSRGames
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        Window1 Calendrier = new Window1();
         public MainWindow()
         {
             InitializeComponent();
@@ -45,6 +45,11 @@ namespace ReservTechLSRGames
             {
                 lbl_erreur.Visibility = Visibility.Visible;
                 lbl_erreur.Content = "Vous avez saisie ni identifiant ni mot de passe.";
+            }
+            if(txt_identifiant.Text != "" & pswbx_mot_de_passe.Password != "")
+            {
+                Calendrier.Show();
+                this.Hide();
             }
             
         }
