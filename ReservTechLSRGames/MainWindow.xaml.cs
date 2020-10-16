@@ -23,6 +23,7 @@ namespace ReservTechLSRGames
         public MainWindow()
         {
             InitializeComponent();
+            
             lbl_erreur.Foreground = Brushes.Red;
             lbl_erreur.Visibility = Visibility.Hidden;
         }

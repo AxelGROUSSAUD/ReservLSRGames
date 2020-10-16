@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReservTechLSRGames"
         mc:Ignorable="d"
-        Title="Connexion" Height="330" Width="407">
+        Title="Connexion" Height="330" Width="407" ResizeMode="NoResize">
     <Grid>
         <Label x:Name="lbl_connexion" Content="Connexion" HorizontalAlignment="Center" Margin="0,61,0,0" VerticalAlignment="Top" Width="67"/>
         <Label x:Name="lbl_identifiant" Content="Identifiant :" HorizontalAlignment="Right" Margin="0,123,226,0" VerticalAlignment="Top" Height="26"/>
