@@ -1,12 +1,152 @@
-﻿<Window x:Class="ReservTechLSRGames.Window1"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReservTechLSRGames"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="ReservTechLSRGames.Window1"
         mc:Ignorable="d"
-        Title="Calendrier" Height="450" Width="800">
+        Title="Calendrier" Height="700" Width="1300">
     <Grid>
-        
+        <Grid x:Name="grd_agenda" HorizontalAlignment="Left" Height="600" Margin="46,36,0,0" VerticalAlignment="Top" Width="1200">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <!--#region Label -->
+            <Label x:Name="lbl_creneauHoraire" Grid.Column="0" Grid.Row="0" Content="Créneau horaire" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_lundi" Grid.Column="1" Grid.Row="0" Content="Lundi" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_mardi" Grid.Column="2" Grid.Row="0" Content="Mardi" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_mercredi" Grid.Column="3" Grid.Row="0" Content="Mercredi" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_jeudi" Grid.Column="4" Grid.Row="0" Content="Jeudi" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_vendredi" Grid.Column="5" Grid.Row="0" Content="Vendredi" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_samedi" Grid.Column="6" Grid.Row="0" Content="Samedi" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_dimanche" Grid.Column="7" Grid.Row="0" Content="Dimanche" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_dixheure" Grid.Column="0" Grid.Row="1" Content="10H - 11H" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_onzeheure" Grid.Column="0" Grid.Row="2" Content="11H - 12H" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_midi" Grid.Column="0" Grid.Row="3" Content="12H - 13H" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_treizeheure" Grid.Column="0" Grid.Row="4" Content="13H - 14H" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_quatorzeheure" Grid.Column="0" Grid.Row="5" Content="14H - 15H" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_quinzeheure" Grid.Column="0" Grid.Row="6" Content="15H - 16H" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_seizeheure" Grid.Column="0" Grid.Row="7" Content="16H - 17H" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_dix_septheure" Grid.Column="0" Grid.Row="8" Content="17H - 18H" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_dix_huitheure" Grid.Column="0" Grid.Row="9" Content="18H - 19H" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_dix_neufheure" Grid.Column="0" Grid.Row="10" Content="19H - 20H" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_vinghtheure" Grid.Column="0" Grid.Row="11" Content="20H - 21H" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lbl_vinght_et_uneheure" Grid.Column="0" Grid.Row="12" Content="21H - 22H" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <!--#endregion-->
+
+            <!--#region Button -->
+            <Button x:Name="un_un" Grid.Column="1" Grid.Row="1" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="un_deux" Grid.Column="1" Grid.Row="2" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="un_trois" Grid.Column="1" Grid.Row="3" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="un_quatre" Grid.Column="1" Grid.Row="4" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="un_cinq" Grid.Column="1" Grid.Row="5" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="un_six" Grid.Column="1" Grid.Row="6" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="un_sept" Grid.Column="1" Grid.Row="7" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="un_huit" Grid.Column="1" Grid.Row="8" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="un_neuf" Grid.Column="1" Grid.Row="9" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="un_dix" Grid.Column="1" Grid.Row="10" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="un_onze" Grid.Column="1" Grid.Row="11" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="un_douze" Grid.Column="1" Grid.Row="12" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="deux_un" Grid.Column="2" Grid.Row="1" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="deux_deux" Grid.Column="2" Grid.Row="2" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="deux_trois" Grid.Column="2" Grid.Row="3" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="deux_quatre" Grid.Column="2" Grid.Row="4" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="deux_cinq" Grid.Column="2" Grid.Row="5" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="deux_six" Grid.Column="2" Grid.Row="6" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="deux_sept" Grid.Column="2" Grid.Row="7" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="deux_huit" Grid.Column="2" Grid.Row="8" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="deux_neuf" Grid.Column="2" Grid.Row="9" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="deux_dix" Grid.Column="2" Grid.Row="10" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="deux_onze" Grid.Column="2" Grid.Row="11" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="deux_douze" Grid.Column="2" Grid.Row="12" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="trois_un" Grid.Column="3" Grid.Row="1" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="trois_deux" Grid.Column="3" Grid.Row="2" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="trois_trois" Grid.Column="3" Grid.Row="3" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="trois_quatre" Grid.Column="3" Grid.Row="4" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="trois_cinq" Grid.Column="3" Grid.Row="5" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="trois_six" Grid.Column="3" Grid.Row="6" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="trois_sept" Grid.Column="3" Grid.Row="7" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="trois_huit" Grid.Column="3" Grid.Row="8" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="trois_neuf" Grid.Column="3" Grid.Row="9" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="trois_dix" Grid.Column="3" Grid.Row="10" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="trois_onze" Grid.Column="3" Grid.Row="11" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="trois_douze" Grid.Column="3" Grid.Row="12" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="quatre_un" Grid.Column="4" Grid.Row="1" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="quatre_deux" Grid.Column="4" Grid.Row="2" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="quatre_trois" Grid.Column="4" Grid.Row="3" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="quatre_quatre" Grid.Column="4" Grid.Row="4" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="quatre_cinq" Grid.Column="4" Grid.Row="5" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="quatre_six" Grid.Column="4" Grid.Row="6" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="quatre_sept" Grid.Column="4" Grid.Row="7" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="quatre_huit" Grid.Column="4" Grid.Row="8" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="quatre_neuf" Grid.Column="4" Grid.Row="9" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="quatre_dix" Grid.Column="4" Grid.Row="10" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="quatre_onze" Grid.Column="4" Grid.Row="11" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="quatre_douze" Grid.Column="4" Grid.Row="12" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="cinq_un" Grid.Column="5" Grid.Row="1" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="cinq_deux" Grid.Column="5" Grid.Row="2" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="cinq_trois" Grid.Column="5" Grid.Row="3" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="cinq_quatre" Grid.Column="5" Grid.Row="4" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="cinq_cinq" Grid.Column="5" Grid.Row="5" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="cinq_six" Grid.Column="5" Grid.Row="6" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="cinq_sept" Grid.Column="5" Grid.Row="7" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="cinq_huit" Grid.Column="5" Grid.Row="8" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="cinq_neuf" Grid.Column="5" Grid.Row="9" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="cinq_dix" Grid.Column="5" Grid.Row="10" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="cinq_onze" Grid.Column="5" Grid.Row="11" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="cinq_douze" Grid.Column="5" Grid.Row="12" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="six_un" Grid.Column="6" Grid.Row="1" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="six_deux" Grid.Column="6" Grid.Row="2" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="six_trois" Grid.Column="6" Grid.Row="3" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="six_quatre" Grid.Column="6" Grid.Row="4" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="six_cinq" Grid.Column="6" Grid.Row="5" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="six_six" Grid.Column="6" Grid.Row="6" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="six_sept" Grid.Column="6" Grid.Row="7" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="six_huit" Grid.Column="6" Grid.Row="8" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="six_neuf" Grid.Column="6" Grid.Row="9" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="six_dix" Grid.Column="6" Grid.Row="10" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="six_onze" Grid.Column="6" Grid.Row="11" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="six_douze" Grid.Column="6" Grid.Row="12" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="sept_un" Grid.Column="7" Grid.Row="1" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="sept_deux" Grid.Column="7" Grid.Row="2" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="sept_trois" Grid.Column="7" Grid.Row="3" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="sept_quatre" Grid.Column="7" Grid.Row="4" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="sept_cinq" Grid.Column="7" Grid.Row="5" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="sept_six" Grid.Column="7" Grid.Row="6" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="sept_sept" Grid.Column="7" Grid.Row="7" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="sept_huit" Grid.Column="7" Grid.Row="8" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="sept_neuf" Grid.Column="7" Grid.Row="9" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="sept_dix" Grid.Column="7" Grid.Row="10" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="sept_onze" Grid.Column="7" Grid.Row="11" Content="4" Background="Green" Foreground="White"/>
+            <Button x:Name="sept_douze" Grid.Column="7" Grid.Row="12" Content="4" Background="Green" Foreground="White"/>
+            <!--#endregion-->
+            
+        </Grid>
+
     </Grid>
 </Window>

@@ -27,6 +27,7 @@ namespace ReservTechLSRGames
             
             lbl_erreur.Foreground = Brushes.Red;
             lbl_erreur.Visibility = Visibility.Hidden;
+            
         }
 
         private void btn_connexion_Click(object sender, RoutedEventArgs e)
@@ -49,6 +50,7 @@ namespace ReservTechLSRGames
             if(txt_identifiant.Text != "" & pswbx_mot_de_passe.Password != "")
             {
                 Calendrier.Show();
+                Calendrier.WindowState = WindowState.Maximized;
                 this.Hide();
             }
             
