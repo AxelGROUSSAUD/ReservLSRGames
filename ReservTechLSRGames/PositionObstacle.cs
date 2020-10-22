@@ -12,6 +12,13 @@ namespace ReservTechLSRGames
         private int _idReservation;
         private int _positionObstacle;
 
+        public PositionObstacle()
+        {
+            _nomObstacle = "";
+            _idReservation = 0;
+            _positionObstacle = 0;
+        }
+
         public PositionObstacle(string unNomObstacle, int unIdReservation, int unePositionObstacle)
         {
             _nomObstacle = unNomObstacle;
