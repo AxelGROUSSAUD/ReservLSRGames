@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,7 +44,7 @@ namespace ReservTechLSRGames
                 connection.Open();
                 return true;
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 //When handling errors, you can your application's response based 
                 //on the error number.
@@ -210,14 +213,14 @@ namespace ReservTechLSRGames
         public DataRow SelectById(string table, int id)
         {
             string query = "";
-            if (table == "Pays")
-            {
-                query = "SELECT * FROM " + table + " WHERE idPays = '" + id + "';";
-            }
-            if (table == "Fromage")
-            {
-                query = "SELECT * FROM " + table + " WHERE identifiant = '" + id + "';";
-            }
+            //if (table == "Pays")
+            //{
+            //    query = "SELECT * FROM " + table + " WHERE idPays = '" + id + "';";
+            //}
+            //if (table == "Fromage")
+            //{
+            //    query = "SELECT * FROM " + table + " WHERE identifiant = '" + id + "';";
+            //}
             DataSet unDataSet = this.RQuery(query);
             DataTable unDataTable = unDataSet.Tables[0];
             DataRow unDataRow = unDataTable.Rows[0];
