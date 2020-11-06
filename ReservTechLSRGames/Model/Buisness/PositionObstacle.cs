@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReservTechLSRGames
 {
-    class PositionObstacle
+    public class PositionObstacle
     {
         private string _nomObstacle;
         private int _idReservation;

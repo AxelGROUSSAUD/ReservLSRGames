@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ReservTechLSRGames
 {
-    class DBAL
+    public class DBAL
     {
         private MySqlConnection connection;
         private string server;
