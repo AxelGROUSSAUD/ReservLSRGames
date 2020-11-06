@@ -213,10 +213,10 @@ namespace ReservTechLSRGames
         public DataRow SelectById(string table, int id)
         {
             string query = "";
-            //if (table == "Pays")
-            //{
-            //    query = "SELECT * FROM " + table + " WHERE idPays = '" + id + "';";
-            //}
+            if (table == "Reservation")
+            {
+                query = "SELECT * FROM " + table + " WHERE idReservation = '" + id + "';";
+            }
             //if (table == "Fromage")
             //{
             //    query = "SELECT * FROM " + table + " WHERE identifiant = '" + id + "';";
