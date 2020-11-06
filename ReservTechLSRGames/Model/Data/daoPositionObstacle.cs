@@ -1,6 +1,7 @@
 ﻿using CsvHelper;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -50,6 +51,18 @@ namespace ReservTechLSRGames.Model.Buisness
                     this.Insert(item);
                 }
             }
+        }
+
+        public List<PositionObstacle> SelectAll()
+        {
+            List<PositionObstacle> uneListePositionObstacle = new List<PositionObstacle>();
+            DataTable uneDataTable = _DBAL.SelectAll("PositionObstacle");
+            foreach (DataRow dtr in uneDataTable.Rows)
+            {
+                PositionObstacle unePositionObstacle = new PositionObstacle((string)dtr["nomObstacle"],(int)dtr["idReservation"], (int)dtr["positionObstacle"]);
+                uneListePositionObstacle.Add(unePositionObstacle);
+            }
+            return uneListePositionObstacle;
         }
     }
 }
