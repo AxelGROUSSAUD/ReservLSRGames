@@ -27,7 +27,7 @@ namespace ReservTechLSRGames.Model.Buisness
 
         }
 
-        public void Update(Obstacle unObstacle)// mettre à jour une ligne
+        public void Update(Obstacle unObstacle)// mettre à jour une ligne   
         {
             _DBAL.Update("UPDATE  Obstacle SET nomObstacle = '" + unObstacle.NomObstacle + "', definition = '" + unObstacle.Definition + "', photo = '" + unObstacle.Photo + "', typeObstacle = '" + unObstacle.TypeObstacle + "' WHERE nomObstacle = '" + unObstacle.NomObstacle + "';");
 
