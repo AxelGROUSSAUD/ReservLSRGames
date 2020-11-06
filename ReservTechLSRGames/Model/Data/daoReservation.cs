@@ -51,5 +51,10 @@ namespace ReservTechLSRGames.Model.Buisness
                 }
             }
         }
+
+        public List<Reservation> SelectAll()
+        {
+
+        }
     }
 }
