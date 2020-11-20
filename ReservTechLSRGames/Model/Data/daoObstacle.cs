@@ -40,9 +40,9 @@ namespace ReservTechLSRGames.Model.Buisness
 
         }
 
-        public void InsertByFile()
+        public void InsertByFile(string chemin)
         {
-            using (var reader = new StreamReader("obstacles.csv"))
+            using (var reader = new StreamReader(chemin))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
                 csv.Configuration.Delimiter = ";";
