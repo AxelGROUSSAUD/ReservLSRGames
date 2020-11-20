@@ -24,19 +24,19 @@ namespace ReservTechLSRGames.Model.Buisness
 
         {
             
-            _DBAL.Insert("INSERT INTO Obstacle values (" + unObstacle.NomObstacle + ", '" + unObstacle.Definition + "','"+unObstacle.Photo +"','" + unObstacle.TypeObstacle+"');");
+            _DBAL.Insert(" Obstacle values (" + unObstacle.NomObstacle + ", '" + unObstacle.Definition + "','"+unObstacle.Photo +"','" + unObstacle.TypeObstacle+"');");
 
         }
 
         public void Update(Obstacle unObstacle)// mettre à jour une ligne   
         {
-            _DBAL.Update("UPDATE  Obstacle SET nomObstacle = '" + unObstacle.NomObstacle + "', definition = '" + unObstacle.Definition + "', photo = '" + unObstacle.Photo + "', typeObstacle = '" + unObstacle.TypeObstacle + "' WHERE nomObstacle = '" + unObstacle.NomObstacle + "';");
+            _DBAL.Update(" Obstacle SET nom = '" + unObstacle.NomObstacle + "', UneDefinition = '" + unObstacle.Definition + "', Photo = '" + unObstacle.Photo + "', typeObstacle = '" + unObstacle.TypeObstacle + "' WHERE nom = '" + unObstacle.NomObstacle + "';");
 
         }
 
         public void Delete(Obstacle unObstacle) //supprimer une ligne
         {
-            _DBAL.Delete("DELETE FROM Obstacle WHERE nomObstacle = '" + unObstacle.NomObstacle + "' ;");
+            _DBAL.Delete("Obstacle WHERE nom = '" + unObstacle.NomObstacle + "' ;");
 
         }
 

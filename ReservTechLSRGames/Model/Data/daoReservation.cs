@@ -21,18 +21,18 @@ namespace ReservTechLSRGames.Model.Buisness
 
         public void Insert(Reservation uneReservation)
         {
-            _DBAL.Insert("INSERT INTO Reservation VALUES (" + uneReservation.IdReservation + "," + uneReservation.IdClient+","+uneReservation.IdSalle+","+uneReservation.IdTransaction+",'"+uneReservation.DateReservation+"',"+uneReservation.NbJoueurs+","+uneReservation.NbObstacle+");");
+            _DBAL.Insert(" Reservation VALUES (" + uneReservation.IdReservation + "," + uneReservation.IdClient+","+uneReservation.IdSalle+","+uneReservation.IdTransaction+",'"+uneReservation.DateReservation+"',"+uneReservation.NbJoueurs+","+uneReservation.NbObstacle+");");
         }
 
         public void Update(Reservation uneReservation)
         {
-            _DBAL.Update("UPDATE Reservation SET idReservation = "+uneReservation.IdReservation+",idClient = "+uneReservation.IdClient+",idSalle = "+uneReservation.IdSalle+",idTransaction = "+uneReservation.IdTransaction+",dateReservation = " + uneReservation.DateReservation + ", nbJoueurs = " + uneReservation.NbJoueurs + ", nbObstacles = " + uneReservation.NbObstacle + "WHERE idReservation = " + uneReservation.IdReservation + ";");
+            _DBAL.Update(" Reservation SET idReservation = "+uneReservation.IdReservation+",idClient = "+uneReservation.IdClient+",idSalle = "+uneReservation.IdSalle+",idTransaction = "+uneReservation.IdTransaction+",dateReservation = " + uneReservation.DateReservation + ", nbJoueurs = " + uneReservation.NbJoueurs + ", nbObstacles = " + uneReservation.NbObstacle + "WHERE idReservation = " + uneReservation.IdReservation + ";");
         }
 
 
         public void Delete(Reservation uneReservation)
         {
-            _DBAL.Delete("DELETE FROM Reservation WHERE idReservation = "+uneReservation.IdReservation + ";");
+            _DBAL.Delete(" Reservation WHERE idReservation = "+uneReservation.IdReservation + ";");
         }
 
         public void InsertByFile()
