@@ -217,10 +217,11 @@ namespace ReservTechLSRGames
             {
                 query = "SELECT * FROM " + table + " WHERE idReservation = '" + id + "';";
             }
-            //if (table == "Fromage")
-            //{
-            //    query = "SELECT * FROM " + table + " WHERE identifiant = '" + id + "';";
-            //}
+            if (table == "PositionObstacle")
+            {
+                query = "SELECT * FROM " + table + " WHERE idPositionObstacle = '" + id + "';";
+            }
+            
             DataSet unDataSet = this.RQuery(query);
             DataTable unDataTable = unDataSet.Tables[0];
             DataRow unDataRow = unDataTable.Rows[0];

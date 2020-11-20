@@ -21,17 +21,17 @@ namespace ReservTechLSRGames.Model.Buisness
 
         public void Insert(PositionObstacle unePositionObstacle)
         {
-            _DBAL.Insert("INSERT INTO PositionObstacle values ('" + unePositionObstacle.NomObstacle + "', " + unePositionObstacle.IdReservation + "," + unePositionObstacle.unePositionObstacle + ");");
+            _DBAL.Insert("INSERT INTO PositionObstacle values ("+unePositionObstacle.IdPositionObstacle+",'" + unePositionObstacle.NomObstacle + "', " + unePositionObstacle.IdReservation + "," + unePositionObstacle.unePositionObstacle + ");");
         }
 
         public void Update(PositionObstacle unePositionObstacle)
         {
-            _DBAL.Update("UPDATE  PositionObstacle SET nomObstacle = '" + unePositionObstacle.NomObstacle + "', idReservation = " + unePositionObstacle.IdReservation + " , positionObstacle = " + unePositionObstacle.unePositionObstacle + " WHERE nomObstacle = '" + unePositionObstacle.NomObstacle + "';");
+            _DBAL.Update("UPDATE  PositionObstacle SET idPositionObstacle = "+unePositionObstacle.IdPositionObstacle+",nomObstacle = '" + unePositionObstacle.NomObstacle + "', idReservation = " + unePositionObstacle.IdReservation + " , positionObstacle = " + unePositionObstacle.unePositionObstacle + " WHERE nomObstacle = '" + unePositionObstacle.NomObstacle + "';");
         }
 
         public void Delete(PositionObstacle unePositionObstacle)
         {
-            _DBAL.Delete("DELETE FROM PositionObstacle WHERE nomObstacle = '" + unePositionObstacle.NomObstacle + "' ;");
+            _DBAL.Delete("DELETE FROM PositionObstacle WHERE idPositionObstacle = '" + unePositionObstacle.IdPositionObstacle + "' ;");
         }
 
 
@@ -59,10 +59,17 @@ namespace ReservTechLSRGames.Model.Buisness
             DataTable uneDataTable = _DBAL.SelectAll("PositionObstacle");
             foreach (DataRow dtr in uneDataTable.Rows)
             {
-                PositionObstacle unePositionObstacle = new PositionObstacle((string)dtr["nomObstacle"],(int)dtr["idReservation"], (int)dtr["positionObstacle"]);
+                PositionObstacle unePositionObstacle = new PositionObstacle((int)dtr["idPositionObstacle"],(string)dtr["nomObstacle"],(int)dtr["idReservation"], (int)dtr["positionObstacle"]);
                 uneListePositionObstacle.Add(unePositionObstacle);
             }
             return uneListePositionObstacle;
+        }
+
+        public PositionObstacle SelectById(int idPositionObstacle)
+        {
+            DataRow UneDataRow = _DBAL.SelectById("PositionObstacle", idPositionObstacle);
+            PositionObstacle unePositionObstacle = new PositionObstacle((int)UneDataRow["idPositionObstacle"], (string)UneDataRow["nomObstacle"], (int)UneDataRow["idReservation"], (int)UneDataRow["PositionObstacle"]);
+            return unePositionObstacle;
         }
     }
 }
